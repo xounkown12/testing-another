@@ -1,0 +1,10 @@
+name: Just testing
+on: # When the workflow runs (here, on every push to main)
+  push:
+    branches: [main]
+jobs: # Defines tasks (like build)
+  build:
+    runs-on: ubuntu-latest
+    steps: # The commands or actions executed in each job
+      - run: echo "testing"
+      - run: cat /etc/os-release
