@@ -8,6 +8,7 @@ jobs: # Defines tasks (like build)
     steps: # The commands or actions executed in each job
       - run: echo "testing from ci/cid" >> $HOME/foo
       - run: cat /etc/os-release
+      - run: cat $HOME/foo
 
       - name: Upload the file
         uses: actions/upload-artifact@v4
